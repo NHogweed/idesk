@@ -8,7 +8,7 @@ acinclude.m4 \
 AUTHORS \
 COPYING \
 INSTALL \
-README \
+README.md \
 TODO \
 ChangeLog \
 NEWS
@@ -17,7 +17,7 @@ install-data-local:
 	@$(NORMAL_INSTALL)
 	if test -d $(srcdir)/examples; then \
 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir); \
-	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(pkgdatadir); \
+	$(INSTALL_DATA) $(srcdir)/README.md $(DESTDIR)$(pkgdatadir); \
 	  for example in $(srcdir)/examples/*; do \
 	    if test -f $$example; then \
 	      $(INSTALL_DATA) $$example $(DESTDIR)$(pkgdatadir); \
