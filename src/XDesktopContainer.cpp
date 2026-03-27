@@ -597,8 +597,6 @@ void XDesktopContainer::runCommand(const string & command)
 		// this line is never reached
     } else if (pid < 0) {
         fprintf(stderr, "Failed to fork process to run command '%s': %s\n", command.c_str(), strerror(errno));
-    } else {
-        waitpid(pid, NULL, 0);
     }
 }
 int XDesktopContainer::widthOfScreen()
